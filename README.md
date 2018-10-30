@@ -10,8 +10,8 @@ Blah blah, blah blah blah blah.
 
 Contact Information:
 1. **GitHub**
-2. 
-3. third
+2. **Email**
+3. **Something else**
 
 
 
