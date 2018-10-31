@@ -1,0 +1,24 @@
+{
+  "name": "KaylaForsythe",
+  "version": "1.0.0",
+  "description": "![picture](https://i.ytimg.com/vi/aaqzPMOd_1g/maxresdefault.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kayforsythe/savvy-portfolio-kayla-forsythe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kayforsythe/savvy-portfolio-kayla-forsythe/issues"
+  },
+  "homepage": "https://github.com/Kayforsythe/savvy-portfolio-kayla-forsythe#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "parcel-bundler": "^1.10.3"
+  }
+}
