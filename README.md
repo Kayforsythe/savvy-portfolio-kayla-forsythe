@@ -2,8 +2,7 @@
 
 
 
-![https://i.ytimg.com/vi/aaqzPMOd_1g/maxresdefault.jpg]
-
+![](https://i.ytimg.com/vi/aaqzPMOd_1g/maxresdefault.jpg)
 
 
 Here is a little bit of text about me!
