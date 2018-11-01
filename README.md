@@ -1,4 +1,4 @@
-# Welcome to my SavvyCoders portfolio project!
+# Welcome to my SavvyCoders Portfolio Project!
 
 
 
