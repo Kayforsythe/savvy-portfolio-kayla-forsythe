@@ -6,7 +6,7 @@
 
 
 Here is a little bit of text about me!
-Blah blah, blah blah blah blah.
+Blah blah, blah blah blah b  lah.
 
 
 Contact Information:
