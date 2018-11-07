@@ -1,0 +1,40 @@
+body {
+    background-color: darkslategray;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+#header {
+    color: hotpink;
+}
+
+.intro {
+    color: darkseagreen;
+    font-size: 55px;
+    font-style: normal;
+}
+
+h2 {
+    border: 2px solid black;
+    padding: 40px;
+    background: url(https://images.pexels.com/photos/255377/pexels-photo-255377.jpeg?auto=compress&cs=tinysrgb&h=350);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: darkolivegreen;
+    background-color: black;
+    font-size: 40px; 
+
+}
+
+img {
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer {
+    color: brown;
+    background-color: coral;
+}
