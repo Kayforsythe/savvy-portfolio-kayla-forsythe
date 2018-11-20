@@ -27,7 +27,7 @@
             "always"
         ],
         "brace-style": [
-            "error",
+            "off",
             "stroustrup"
         ],
         "callback-return": "off",
@@ -63,7 +63,7 @@
         "id-length": "off",
         "id-match": "error",
         "indent": [
-            "error",
+            "off",
             4,
             {
                 "SwitchCase": 1
@@ -101,7 +101,7 @@
             }
         ],
         "linebreak-style": [
-            "error",
+            "off",
             "unix"
         ],
         "lines-around-comment": "off",
