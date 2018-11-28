@@ -2,7 +2,10 @@
     background-color: darkslategray;
     font-family: 'Indie Flower', sans-serif;
     display: grid;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas: "navigation" "header" "content" "footer";
     min-height: 100vh;
+
     }
 
 #header {
@@ -109,10 +112,9 @@ img {
         grid-template-columns: 15% auto;
         grid-template-rows: min-content auto min-content;
         grid-template-areas: 
-        "navigation" 
-        "header" 
-        "content" 
-        "footer";
+        "navigation header"  
+        "navigation content" 
+        "navigation footer";
     }
     #navigation > ul {
         flex-direction: column;
@@ -133,7 +135,6 @@ img {
     grid-area: footer;
     position: relative;
     height: auto;
-    width: 100vw;
     color: brown;
     background-color: coral;
     padding: 40px;

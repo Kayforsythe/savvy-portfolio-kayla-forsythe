@@ -1,4 +1,5 @@
-export default `
+export default function Content(){
+return `
 <div id="content">
         <div class="container">
 
@@ -44,3 +45,4 @@ export default `
         </div>
     </div>
 `;
+}
