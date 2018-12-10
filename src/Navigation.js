@@ -1,21 +1,21 @@
-export default function Navigation(){
-    return `
-<div id="navigation">
-            <ul class="container">
-                <li>
-                    <a href="./blog">blog</a>
-                </li>
-                <li>
-                    <a href="./contact">contact</a>
-                </li>
-                <li>
-                    <a href="./project">project</a>
-                    <ul class ="dropdown">
-                        <li><a href="">first</a></li>
-                        <li><a href="">second</a></li>
-                        <li><a href="">third</a></li>
-                    </ul>
-        </div>
-    </div>
-`;
+function buildLinks(links){
+    var list = '';
+
+     for(let i = 0; i < links.length; i++){
+        list += `
+          <li>
+              <a href="#">${links[i]}</a>
+          </li>
+        `;
+    }
+    
 }
+ export default function Navigation(state){
+    return `
+      <div id="navigation">
+        <ul class="container">
+        ${buildLinks(state[state.active].links)}
+        </ul>
+      </div>
+    `;
+ }

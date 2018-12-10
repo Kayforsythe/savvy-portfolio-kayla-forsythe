@@ -26,7 +26,7 @@
     background: url(https://images.pexels.com/photos/255377/pexels-photo-255377.jpeg?auto=compress&cs=tinysrgb&h=350);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    color: darkolivegreen;
+    color: rgb(84, 107, 43);
     background-color: black;
     font-size: 40px;
 }
@@ -38,10 +38,11 @@
 }
 
 img {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 300px;
+    margin: 5px;
+    display: inline-flex;
+    position: center;
+    width: 300px;
+    max-width: 400px;
 }
 
 #navigation {
@@ -137,11 +138,13 @@ img {
     height: auto;
     color: brown;
     background-color: coral;
-    padding: 40px;
+    padding: 20px;
+    font-size: 20px;
 }
 
 #footer li {
-    background-color: white;
+    list-style: none;
+    display: block;
 }
 
 #footer li:hover {
@@ -149,7 +152,6 @@ img {
 }
 
 #footer>ul>li {
-    display: inline;
     position: relative;
     list-style: none;
     padding: 3px;
@@ -163,8 +165,8 @@ img {
     display: none;
     position: relative;
     top: 0;
-    right: 0;
-    display: none;
+    left: 2px;
+    list-style: none;
 }
 
 #footer a:hover+.dropdown {

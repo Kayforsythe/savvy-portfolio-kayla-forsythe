@@ -8,16 +8,20 @@ import Footer from './src/Footer';
 var State = {
     'active': 'home',
     'home': {
-        'title': 'Welcome to my Savvy Coders Portfolio Project'
+        'title': 'Welcome to my Savvy Coders Portfolio Project',
+        'links': ['blog', 'contact', 'project']
     },
     'blog': {
-        'title': 'Please read my insightful Blog'
+        'title': 'Please read my insightful Blog',
+        'links': ['home', 'contact', 'project']
     },
     'contact': {
-        'title': 'Call me maybe'
+        'title': 'Call me maybe',
+        'links': ['home', 'blog', 'project']
     },
     'project': {
-        'title': 'look at all those chickens'
+        'title': 'look at all those chickens',
+        'links': ['home', 'blog', 'contact']
     }
 };
 
@@ -45,28 +49,9 @@ function render(state){
 
     links = document.querySelectorAll('#navigation a');
     
-    
-    links[0].addEventListener(
-        'click',
-        handleNav
-        );
-        
-        links[1].addEventListener(
-            'click',
-            handleNav
-            
-            );
-            
-            links[2].addEventListener(
-                'click',
-                handleNav
-                );
+    for(let i = 0; i < links.length; i++){
+        links[i].addEventListener('click', handleNav);
+    }
+}
 
-                links[3].addEventListener(
-                    'click',
-                    handleNav
-                    );
-            }
-            
-
-            render(State);
+render(State);
