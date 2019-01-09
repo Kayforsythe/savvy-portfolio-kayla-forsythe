@@ -1,7 +1,9 @@
-export default function Blog(){
-return `
-<h1>Hello, Blog. My Name is Kayla</h1>
+import Post from './Post';
 
-
-    `;
+export default function Blog(state){
+return state
+    .posts
+    .map(Post)
+    .join('')
+;
 }

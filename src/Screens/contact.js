@@ -14,7 +14,7 @@ return `
       <input type="radio" name="subject" value="personal" checked><span>Personal message</span>
       <input type="radio" name="subject" value="other" checked><span>Don't know/something else</span>
       
-      ​
+
       <input type="checkbox" name="optin" value="trusting" checked>Subscribe me to your newsletter!
       <input type="checkbox" name="optout" value="skeptical" disabled>Cheeky checkbox...
       

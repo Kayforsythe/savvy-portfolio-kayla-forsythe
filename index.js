@@ -4,11 +4,15 @@ import greet from './src/greet';
 import Content from './src/Content';
 import Footer from './src/Footer';
 import Navigo from 'navigo';
+import Store from './src/Store';
 
 var router = new Navigo(window.location.origin);
 
+var root = document.querySelector('#root');
+
 
 var State = {
+    'posts': [],
     'active': 'Home',
     'Home': {
         'title': 'Welcome to my Savvy Coders Portfolio Project',
@@ -28,29 +32,42 @@ var State = {
     }
 };
 
-var root = document.querySelector('#root');
+var store = new Store(State);
+
 
 function handleNav(params){
-    State.active = params.page;
-
-    render(State); // eslint-disable-line
+    store.dispatch((state) => {
+        state.active = params.page;
+        
+        return state;
+    }
+    );
 }
 
-function render(state){
-    root.innerHTML = `
+    function render(state){
+        root.innerHTML = `
     ${Navigation(state)}
     ${Header(state)}
     ${Content(state)}
     ${Footer(state)}
     `;
-    
-    greet();
 
-    router.updatePageLinks();
-}
+        greet();
 
+        router.updatePageLinks();
+    }
 
-router
-    .on('/:page', handleNav)
-    .on('/', () => handleNav({ 'page': 'Home' }))
-    .resolve();
+    store.addListener(render);
+
+    router
+        .on('/:page', handleNav)
+        .on('/', () => handleNav({ 'page': 'Home' }))
+        .resolve();
+
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => response.json())
+        .then((posts) => store.dispatch((state) => {
+            state.posts = posts;
+            
+            return state;
+        }));
