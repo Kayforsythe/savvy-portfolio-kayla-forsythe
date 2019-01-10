@@ -57,19 +57,6 @@ function start(state){
     render(App(state), root);
 }
 
-/*    function render(state){
-        root.innerHTML = `
-    ${Navigation(state)}
-    ${Header(state)}
-    ${Content(state)}
-    ${Footer(state)}
-    `;
-
-        greet();
-
-        router.updatePageLinks();
-} */
-
 store.addListener(start);
 
 router
