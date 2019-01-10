@@ -1,5 +1,7 @@
+import { html } from 'lit-html';
+
 export default function Home(){
-    return `
+    return html `
 
             <h1 class="intro">
             Hi, I'm Kayla!</h1>

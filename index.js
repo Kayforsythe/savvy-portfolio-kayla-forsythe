@@ -5,6 +5,7 @@ import Content from './src/Content';
 import Footer from './src/Footer';
 import Navigo from 'navigo';
 import Store from './src/Store';
+import { html, render } from 'lit-html';
 
 var router = new Navigo(window.location.origin);
 
@@ -40,11 +41,23 @@ function handleNav(params){
         state.active = params.page;
         
         return state;
-    }
-    );
+    });
 }
 
-    function render(state){
+function App(state){
+    return html`
+        ${Navigation(state)}
+        ${Header(state)}
+        ${Content(state)}
+        ${Footer(state)}
+    `;
+}
+
+function start(state){
+    render(App(state), root);
+}
+
+/*    function render(state){
         root.innerHTML = `
     ${Navigation(state)}
     ${Header(state)}
@@ -55,19 +68,23 @@ function handleNav(params){
         greet();
 
         router.updatePageLinks();
-    }
+} */
 
-    store.addListener(render);
+store.addListener(start);
 
-    router
-        .on('/:page', handleNav)
+router
+    .on('/:page', handleNav)
         .on('/', () => handleNav({ 'page': 'Home' }))
         .resolve();
 
+        router.updatePageLinks();
+
     fetch('https://jsonplaceholder.typicode.com/posts')
         .then((response) => response.json())
-        .then((posts) => store.dispatch((state) => {
+        .then((posts) => {
+            store.dispatch((state) => {
             state.posts = posts;
             
             return state;
-        }));
+        });
+    });

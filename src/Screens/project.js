@@ -1,6 +1,8 @@
+import { html } from 'lit-html';
+
 export default function project(){
-return `
-<h1>It's an avacado.... thaaaaaaaaaaaaanks</h1>
+    return html `
+        <h1>It's an avacado.... thaaaaaaaaaaaaanks</h1>
 
 `;
 }
